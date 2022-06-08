@@ -5,14 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class statusLocation extends Model
 {
     use HasFactory;
-
-    protected $table = 'clients';
-
-    public function location(){
-        return $this->hasMany(Location::class);
-    }
-
+    protected $table= "status_locations";
 }

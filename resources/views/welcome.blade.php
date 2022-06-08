@@ -21,6 +21,37 @@
     -faire appel à la balise script pour charger les composants livewire avec @livewireScripts et pareil pour le style avec @livewireStyles
     appeler le code de la vue master dans les differentes pages souhaitées avec @extends(dossier.fichier) ;
     }
+
+
+            {                                    1-LES MODELS
+                -Les models sont des fichiers qui contiennent des informations sur les tables de la base de données.
+                -Pour créer un model il faut taper la commande php artisan make:model nom_du_model.
+                -Le model sert a créer des fonctions qui permettent de faire des requêtes dans la base de données,
+                 par exemple le model ArticlesModel permet de faire des requêtes sur la table articles.
+
+
+                                                2-LES MIGRATIONS
+                -Les migrations sont des fichiers qui permettent de créer des tables dans la base de données.
+                -Pour créer une migration il faut taper la commande php artisan make:migration nom_de_la_migration, par exemple la migration articles_table pour créer la table articles.
+
+                                                3-LES SEEDERS
+                -Les seeders sont des fichiers qui permettent de remplir la base de données avec des données dont on a besoin.
+                -Pour créer un seeder il faut taper la commande php artisan make:seeder nom_du_seeder.
+                -Le seeder sert a remplir la base de données avec des données dont on a besoin.
+
+                                                4-LES FACTORIES
+                -Les factories sont des fichiers qui permettent de créer des données dont on a besoin.
+                -Pour créer une factory il faut taper la commande php artisan make:factory nom_de_la_factory.
+
+                 
+            }
+
+            {
+                                                     LES RELATIONS
+                                            1-BELONGS TO
+                -La relation belongs to est une relation qui permet de lier une table à une autre table pour créer une clé étrangère,
+                 par exemple une table articles possède une clé étrangère sur la table categories donc la relation sera belongs to.
+            }
  --}}
 @extends("layouts.master");
 

@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Location extends Model
+{
+    use HasFactory;
+    protected $table= "locations";
+
+    public function user(){
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    public function client(){
+        return $this->belongsTo(Client::class, 'client_id', 'id');
+    }
+
+    public function status(){
+       return $this->belongsTo(statusLocation::class, 'status_location_id','id');
+    }
+    public function paiements()
+    {
+        return $this->hasMany(Paiement::class);
+    }
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class, 'article_location', 'article_id', 'location_id');
+    }
+}
